@@ -30,7 +30,6 @@ public class Webpaycontroller {
         return ResponseEntity.ok(respuesta);
     }
 
-    // 2. Endpoint POST donde se recibe el status de pago desde Webpay y se cambia el estado
     @PostMapping("/confirmar")
     public ResponseEntity<?> confirmarTransaccion(@RequestParam String token, @RequestParam String status) {
         Transaccion transaccionActualizada = webpayService.finalizarPago(token, status);
