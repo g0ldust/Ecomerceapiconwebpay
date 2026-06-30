@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/webay")
+@RequestMapping("/api/webpay")
 public class Webpaycontroller {
     @Autowired
     private  WebpayService webpayService;
