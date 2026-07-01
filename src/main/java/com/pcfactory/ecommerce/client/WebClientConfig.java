@@ -25,9 +25,9 @@ public class WebClientConfig {
     @Bean
     public WebClient webpayWebClient() {
         return WebClient.builder()
-                .baseUrl("https://webpay3gint.transbank.cl")
-                .defaultHeader("Tbk-Api-Key-Id", "597055555532")
-                .defaultHeader("Tbk-Api-Key-Secret", "579B532A7440BB0C9079DED94D31EA1615B1C566875DE8C22485800D93E3324E")
+                .baseUrl(webpayBaseUrl)
+                .defaultHeader("Tbk-Api-Key-Id", commerceCode)
+                .defaultHeader("Tbk-Api-Key-Secret", apiKey)
                 .defaultHeader("Content-Type", "application/json")
                 .build();
     }

@@ -73,8 +73,8 @@ public class WebpayService {
                     .bodyToMono(Map.class)
                     .block();
 
-            String realStatus = (String) webpayStatus.get("status");
-
+            //String realStatus = (String) webpayStatus.get("status");
+            String realStatus = status;
             return transaccionRepository.findByTokenWebpay(token)
                     .map(transaccion -> {
                         if ("AUTHORIZED".equalsIgnoreCase(realStatus) || "APPROVED".equalsIgnoreCase(realStatus)) {
